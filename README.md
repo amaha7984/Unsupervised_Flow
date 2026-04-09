@@ -1,6 +1,7 @@
 # Unsupervised_Flow
 Flow-based Model For Unsupervised Domain Translation
 - This project explored how we can use self-supervision to learn unpaired translation.
+- We explored learning an embedding space using DINOv2 and Two-Layer MLP
 
 ## Training OT-CFM with DDP in Pixel Space
 ```
