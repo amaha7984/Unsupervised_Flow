@@ -13,6 +13,9 @@ torchrun --standalone --nnodes=1 --nproc_per_node=4 \
     --output_dir ./path/to/saving/weight \
     --parallel True --master_port "xxxxx"
 ```
+
+**Note: To train indpendent coupling conditional flow matching, change --model "icfm"**
+
 ## Datasets
 ### UIEB Dataset
 - Paper: "An Underwater Image Enhancement Benchmark Dataset and Beyond"
