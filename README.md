@@ -22,6 +22,11 @@ torchrun --standalone --nnodes=1 --nproc_per_node=4 \
        - Run: ``` python3.11 preparing_UIEB_dataset.py```
        - Divide dataset, so that train set have 800 images and test set have 90 images
 
+### Cityscapes Dataset
+- Paper: "The Cityscapes Dataset for Semantic Urban Scene Understanding"
+- Preparation of Cityscapes dataset
+   - Follow the information provided in "Unpaired image-to-image translation using cycle-consistent adversarial networks" at the experimental setups.
+
 
 
 ## Acknowledgments
