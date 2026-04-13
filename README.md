@@ -22,7 +22,8 @@ torchrun --standalone --nnodes=1 --nproc_per_node=4 \
 - Link: https://li-chongyi.github.io/proj_benchmark.html
 - Preparation of UIEB Dataset for Image-to-Image Translation
        - Download Images from the Link Above
-       - Run: ``` python3.11 preparing_UIEB_dataset.py```
+       - Run: 
+         - ``` python3.11 preparing_UIEB_dataset.py```
        - Divide dataset, so that train set have 800 images and test set have 90 images
 
 ### Cityscapes Dataset
