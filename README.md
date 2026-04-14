@@ -1,7 +1,10 @@
 # Unsupervised_Flow
 Flow-based Model For Unsupervised Domain Translation
-- This project explored how we can use self-supervision to learn unpaired translation.
+- The problem we are considering is translation of images from one domain to another domain with flow matching.
+- The domain could be semantic relation (road structures), fidelity (realistic), and color relation (color grading).
+- This project explores how we can use self-supervision to learn unpaired translation.
 - The main idea is that a learned embedding can be used as task specific input-output pair selection for training flow matching model in unpaired setting.
+- By unpaired setting meaning, we mean a scenario where there is no exact corresponding input and output images.
 - We explored learning an embedding space using DINOv2 and Two-Layer MLP.
 
 ## Training OT-CFM with DDP in Pixel Space
