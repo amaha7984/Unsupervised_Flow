@@ -1,7 +1,8 @@
 # Unsupervised_Flow
 Flow-based Model For Unsupervised Domain Translation
 - This project explored how we can use self-supervision to learn unpaired translation.
-- We explored learning an embedding space using DINOv2 and Two-Layer MLP
+- The main idea is that a learned embedding can be used as task specific input-output pair selection for training flow matching model in unpaired setting.
+- We explored learning an embedding space using DINOv2 and Two-Layer MLP.
 
 ## Training OT-CFM with DDP in Pixel Space
 ```
