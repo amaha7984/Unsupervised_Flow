@@ -7,7 +7,7 @@ Flow-based Model For Unsupervised Domain Translation
 - By unpaired setting meaning, we mean a scenario where there is no exact corresponding input and output images.
 - We explored learning an embedding space using DINOv2 and Two-Layer MLP.
 
-## Training OT-CFM with DDP in Pixel Space
+## Training OT-CFM ([conditional-flow-matching](https://github.com/atong01/conditional-flow-matching)) with DDP in Pixel Space
 ```
 torchrun --standalone --nnodes=1 --nproc_per_node=4 \
      train_ddp.py --model "otcfm" --lr 2e-4 --ema_decay 0.9999 \
