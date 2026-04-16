@@ -36,6 +36,9 @@ torchrun --standalone --nnodes=1 --nproc_per_node=4 \
 - Preparation of Cityscapes dataset
    - Follow the information provided in "Unpaired image-to-image translation using cycle-consistent adversarial networks" at the experimental setups.
 
+### Google Map (Aerial -> Photograph)
+- Paper: "Unpaired Image-to-Image Translation with Cycle Consistent GAN"
+
 
 
 ## Acknowledgments
