@@ -1,5 +1,5 @@
 # Unsupervised_Flow
-Flow-based Model For Unsupervised Domain Translation
+Self-supervised semantic representation learning for unpaired flow matching.
 - The problem we are considering is translation of images from one domain to another domain with flow matching.
 - The domain could be semantic relation (road structures), fidelity (realistic), and color relation (color grading).
 - This project explores how we can use self-supervision to learn unpaired translation.
