@@ -37,7 +37,8 @@ torchrun --standalone --nnodes=1 --nproc_per_node=4 \
    - Follow the information provided in "Unpaired image-to-image translation using cycle-consistent adversarial networks" at the experimental setups.
 
 ### Google Map (Aerial -> Photograph)
-- Paper: "Unpaired Image-to-Image Translation with Cycle Consistent GAN"
+- Paper: "Unpaired image-to-image translation using cycle-consistent adversarial networks"
+- Data can be obtained from the github: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
 
 
 
