@@ -20,7 +20,9 @@ torchrun --standalone --nnodes=1 --nproc_per_node=4 \
     --parallel True --master_port "xxxxx"
 ```
 
-**Note: To train indpendent coupling conditional flow matching, change --model "icfm"**
+**Note:**
+- To train independent coupling conditional flow matching, change --model "icfm"
+- To train the proposed method, change --model "selfcfm"
 
 ## Datasets
 ### UIEB Dataset
