@@ -10,6 +10,14 @@ this geometric cost breaks: the nearest neighbor in pixel space is not the
 semantically correct target — semantic correctness and geometric proximity are  
 opposite things across a domain gap.
 
+## Approach
+
+A frozen DINOv2 backbone extracts patch and CLS tokens from both domains. Two  
+lightweight MLPs project tokens into a shared embedding space. Hungarian matching  
+on global cosine similarity yields one-to-one semantically optimal pairings, and  
+a patch-level alignment loss enforces local structural correspondence between  
+assigned pairs. The projector trains jointly with the flow model — the coupling  
+adapts to the task rather than being fixed by a predetermined cost geometry.
 
 ## Training OT-CFM ([conditional-flow-matching](https://github.com/atong01/conditional-flow-matching)) with DDP in Pixel Space
 ```
