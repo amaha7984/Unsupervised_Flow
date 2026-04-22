@@ -1,5 +1,5 @@
-# Self-Flow
-Self-Flow: Learned Semantic Couplings for Cross-Domain Flow Matching Without Paired Supervision 
+# SCFlow (Semantic Coupling Flow)
+SCFlow: Learned Semantic Couplings for Cross-Domain Flow Matching Without Paired Supervision 
 
 ## Problem Statement
 
