@@ -1,6 +1,5 @@
-# Unsupervised_Flow
-Self-supervised semantic representation learning for unpaired flow matching.
-A learned semantic embedding can replace explicit correspondence supervision in flow matching the embedding selects meaningful pairs, and the flow learns the transport between them. 
+# Self-Flow
+Self-Flow: Learned Semantic Couplings for Cross-Domain Flow Matching Without Paired Supervision 
 
 - The problem we are considering is translation of images from one domain to another domain with flow matching.
 - The domain could be semantic relation (road structures), fidelity (realistic), and color relation (color grading).
