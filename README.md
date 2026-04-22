@@ -1,12 +1,15 @@
 # Self-Flow
 Self-Flow: Learned Semantic Couplings for Cross-Domain Flow Matching Without Paired Supervision 
 
-- The problem we are considering is translation of images from one domain to another domain with flow matching.
-- The domain could be semantic relation (road structures), fidelity (realistic), and color relation (color grading).
-- This project explores how we can use self-supervision to learn unpaired translation.
-- The main idea is that a learned embedding can be used as task specific input-output pair selection for training flow matching model in unpaired setting.
-- By unpaired setting meaning, we mean a scenario where there is no exact corresponding input and output images.
-- We explored learning an embedding space using DINOv2 and Two-Layer MLP.
+## Problem Statement
+
+Flow matching methods rely on geometric coupling costs (squared Euclidean distance),  
+originally designed for generative modeling where source and target share the same  
+manifold (e.g., noise → image). When adapted for unpaired cross-domain translation,  
+this geometric cost breaks: the nearest neighbor in pixel space is not the  
+semantically correct target — semantic correctness and geometric proximity are  
+opposite things across a domain gap.
+
 
 ## Training OT-CFM ([conditional-flow-matching](https://github.com/atong01/conditional-flow-matching)) with DDP in Pixel Space
 ```
