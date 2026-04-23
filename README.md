@@ -12,9 +12,13 @@ opposite things across a domain gap.
 A frozen DINOv2 backbone extracts patch and CLS tokens from both domains. Two lightweight MLPs project tokens into a shared embedding space. Hungarian matching on global cosine similarity yields one-to-one semantically optimal pairings, and a patch-level alignment loss enforces local structural correspondence between assigned pairs. The projector trains jointly with the flow model — the coupling  
 adapts to the task rather than being fixed by a predetermined cost geometry.
 
-## Training OT-CFM ([conditional-flow-matching](https://github.com/atong01/conditional-flow-matching)) with DDP in Pixel Space
+## Training OT-CFM ([conditional-flow-matching](https://github.com/atong01/conditional-flow-matching)) in Pixel Space
+**We support DDP PyTorch Training**
+
+
+**Train OT-CFM with**:
 ```
-torchrun --standalone --nnodes=1 --nproc_per_node=4 \
+torchrun --standalone --nnodes=1 --nproc_per_node=num_gpus \
      train_ddp.py --model "otcfm" --lr 2e-4 --ema_decay 0.9999 \
     --pixel \
     --batch_size 64 --total_steps 160001 --save_step 40000 \
@@ -23,9 +27,6 @@ torchrun --standalone --nnodes=1 --nproc_per_node=4 \
     --parallel True --master_port "xxxxx"
 ```
 
-**Note:**
-- To train independent coupling conditional flow matching, change --model "icfm"
-- To train the proposed method, change --model "selfcfm"
 
 ## Datasets
 ### UIEB Dataset
