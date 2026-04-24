@@ -14,7 +14,8 @@ adapts to the task rather than being fixed by a predetermined cost geometry.
 
 
 **We support DDP PyTorch Training**
-## Training Proposed Method, SCFlow
+## Training
+### Training Proposed Method, SCFlow
 The SCFlow can be trained with command:
 torchrun --standalone --nnodes=1 --nproc_per_node=num_gpus \
     train_self_pairing_ddp.py \
@@ -47,7 +48,7 @@ torchrun --standalone --nnodes=1 --nproc_per_node=num_gpus \
   - path-to-dataset is the directory that contains subfolder: trainA, trainB, testA, testB
 
 
-## Training OT-CFM ([conditional-flow-matching](https://github.com/atong01/conditional-flow-matching)) in Pixel Space
+### Training OT-CFM ([conditional-flow-matching](https://github.com/atong01/conditional-flow-matching)) in Pixel Space
 ```
 torchrun --standalone --nnodes=1 --nproc_per_node=num_gpus \
      train_ddp.py --model "otcfm" --lr 2e-4 --ema_decay 0.9999 \
@@ -57,6 +58,7 @@ torchrun --standalone --nnodes=1 --nproc_per_node=num_gpus \
     --output_dir ./path/to/saving/weight \
     --parallel True --master_port "xxxxx"
 ```
+## Inference
 
 
 ## Datasets
