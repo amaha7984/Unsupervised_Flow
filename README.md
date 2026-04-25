@@ -59,6 +59,7 @@ torchrun --standalone --nnodes=1 --nproc_per_node=num_gpus \
     --parallel True --master_port "xxxxx"
 ```
 ## Inference
+The results can be reproduced by running the following command:
 
 
 ## Datasets
