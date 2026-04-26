@@ -12,6 +12,11 @@ opposite things across a domain gap.
 A frozen DINOv2 backbone extracts patch and CLS tokens from both domains. Two lightweight MLPs project tokens into a shared embedding space. Hungarian matching on global cosine similarity yields one-to-one semantically optimal pairings, and a patch-level alignment loss enforces local structural correspondence between assigned pairs. The projector trains jointly with the flow model — the coupling  
 adapts to the task rather than being fixed by a predetermined cost geometry.
 
+<p align="center">
+ <img src="./docs/scflow_architecture.png" alt="Preview" width="95%" />
+</p>
+
+
 
 **We support DDP PyTorch Training**
 ## Training
