@@ -16,48 +16,15 @@ adapts to the task rather than being fixed by a predetermined cost geometry.
 **We support DDP PyTorch Training**
 ## Training
 ### Training Proposed Method, SCFlow
-The SCFlow can be trained with command:
-torchrun --standalone --nnodes=1 --nproc_per_node=num_gpus \
-    train_self_pairing_ddp.py \
-    --model "selfcfm" \
-    --pixel \
-    --lr 2e-4 \
-    --pair_lr 1e-4 \
-    --ema_decay 0.9999 \
-    --batch_size 64 \
-    --total_steps 160001 \
-    --save_step 40000 \
-    --pair_loss_weight 0.10 \
-    --pair_warmup_steps 5000 \
-    --data_root "/path/to/dataset" \
-    --output_dir ./weights/results_dataset_name/selfcfm_dino \
-    --parallel True \
-    --master_port "29501" \
-    --backbone_name "facebook/dinov2-base" \
-    --pair_proj_dim 256 \
-    --pair_proj_hidden_dim 768 \
-    --pair_temperature 0.07 \
-    --pair_conf_threshold 0.20 \
-    --pair_lambda_global 1.0 \
-    --pair_lambda_patch 1.0 \
-    --freeze_backbone True
+**Note: Run from the main directory**
+Run:
+```bash
+./scripts/train.sh
+```
 
   **Note**:
   - After training, weights will be saved in 'selfcfm_dino' folder
-  - num_gpus = available number of gpus
-  - path-to-dataset is the directory that contains subfolder: trainA, trainB, testA, testB
 
-
-### Training OT-CFM ([conditional-flow-matching](https://github.com/atong01/conditional-flow-matching)) in Pixel Space
-```
-torchrun --standalone --nnodes=1 --nproc_per_node=num_gpus \
-     train_ddp.py --model "otcfm" --lr 2e-4 --ema_decay 0.9999 \
-    --pixel \
-    --batch_size 64 --total_steps 160001 --save_step 40000 \
-    --data_root "/path/to/dataset" \
-    --output_dir ./path/to/saving/weight \
-    --parallel True --master_port "xxxxx"
-```
 ## Inference
 The results can be reproduced by running the following command:
 
