@@ -28,11 +28,16 @@ Run:
 ./scripts/train.sh
 ```
 
-  **Note**:
+**Note**:
   - After training, weights will be saved in 'selfcfm_dino' folder
 
 ## Inference
 The results can be reproduced by running the following command:
+```bash
+./scripts/inference.sh
+```
+**Note**:
+  - Path to saved weight should be updated in inference.sh
 
 
 ## Datasets
