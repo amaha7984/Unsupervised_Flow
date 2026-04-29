@@ -3,13 +3,12 @@
  <img src="./docs/scflow_architecture.png" alt="Preview" width="95%" />
 </p>
 
-SCFlow: Learned Semantic Couplings for Cross-Domain Flow Matching Without Paired Supervision 
+SCFlow: Learning Semantic Couplings in Flow Matching for Unpaired Image-to-Image Translation
 
 ## Problem Statement
 
 Flow matching methods rely on geometric coupling costs (squared Euclidean distance), originally designed for generative modeling where source and target share the same manifold (e.g., noise → image). 
-When adapted for unpaired cross-domain translation, this geometric cost breaks: the nearest neighbor in pixel space is not the  semantically correct target — semantic correctness and geometric proximity are  
-opposite things across a domain gap.
+When adapted for unpaired cross-domain translation, this geometric cost breaks: the nearest neighbor in pixel space is not the  semantically correct target, semantic correctness and geometric proximity are opposite things across a domain gap.
 
 ## Approach
 
