@@ -12,8 +12,7 @@ When adapted for unpaired cross-domain translation, this geometric cost breaks: 
 
 ## Approach
 
-A frozen DINOv2 backbone extracts patch and CLS tokens from both domains. Two lightweight MLPs project tokens into a shared embedding space. Hungarian matching on global cosine similarity yields one-to-one semantically optimal pairings, and a patch-level alignment loss enforces local structural correspondence between assigned pairs. The projector trains jointly with the flow model — the coupling  
-adapts to the task rather than being fixed by a predetermined cost geometry.
+A frozen DINOv2 backbone extracts patch and CLS tokens from both domains. Two lightweight MLPs project tokens into a shared embedding space. Hungarian matching on global cosine similarity yields one-to-one semantically optimal pairings, and a patch-level alignment loss enforces local structural correspondence between assigned pairs. The projector trains jointly with the flow model, the coupling adapts to the task rather than being fixed by a predetermined cost geometry.
 
 
 
