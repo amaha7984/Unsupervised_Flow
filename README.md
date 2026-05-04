@@ -37,6 +37,8 @@ The results can be reproduced by running the following command:
 **Note**:
   - Path to saved weight should be updated in inference.sh
 
+- Weights can be downloaded from [google drive](https://drive.google.com/drive/folders/1Dh-PQ1CY9JG0cPD3nk3iDyy4W0crkg5b?usp=drive_link)
+
 
 ## Datasets
 ### UIEB Dataset
